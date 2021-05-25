@@ -40,7 +40,7 @@ const wss: ws.Server = new ws.Server({
     port: serverPort,
     perMessageDeflate: false
 }, () => {
-    console.log(`Listening to http and ws requests on ${serverPort}`);
+    console.log(`Listening to http and ws requests on ${serverPort} at host ${host}`);
 });
 
 function toSocket(webSocket: ws): rpc.IWebSocket {
